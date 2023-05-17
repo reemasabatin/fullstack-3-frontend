@@ -18,16 +18,22 @@ export default function AboutPage({ skills }) {
         <Grid item md={6}>
           <h2>Hi, I am Reema!</h2>
           <p>
-            I am a Full Stack Web Developer building the Front-end of Websites
-            and Web Applications that leads to the success of the overall
-            product. Check out some of my work in the Projects section.
+            I am a Full Stack Engineer building the Front-end of Websites and
+            Web Applications that leads to the success of the overall product.
+            Check out some of my work in the Projects section.
           </p>
           <p>
-            I also like sharing content related to the stuff that I have learned
-            over the years in Web Development so it can help other people of the
-            Dev Community. Feel free to Connect or Follow me on my Linkedin
-            where I post useful content related to Web Development and
-            Programming.
+            My journey in web development began with a curiosity to understand
+            the intricacies of building digital solutions. I have immersed
+            myself in various technologies and frameworks, including front-end
+            and back-end development, to become a well-rounded full stack
+            engineer. With a hunger for knowledge and a determination to
+            succeed, I am committed to delivering high-quality work and staying
+            up-to-date with the latest industry trends. I am excited to take on
+            new challenges and collaborate with experienced professionals to
+            contribute to innovative projects. Feel free to Connect or Follow me
+            on my Linkedin where I post useful content related to Web
+            Development and Programming.
           </p>
           <Button
             variant="contained"
@@ -65,7 +71,17 @@ export async function getStaticProps() {
 
   return {
     props: {
-      skills,
+      skills: [
+        "Python",
+        "Javascript",
+        "React",
+        "Next",
+        "HTML/CSS",
+        "Express",
+        "MongoDB",
+        "React Native",
+        "Redux",
+      ],
     },
     revalidate: 30,
   };
