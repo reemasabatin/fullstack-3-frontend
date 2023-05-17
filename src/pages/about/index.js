@@ -6,7 +6,6 @@ import PageDescription from "@/components/PageDescription";
 
 export default function AboutPage({ skills }) {
   const router = useRouter();
-
   return (
     <section>
       <PageDescription
@@ -61,7 +60,7 @@ export async function getStaticProps() {
 
   try {
     const response = await fetch(
-      "https://mike-skills-api-123123-default-rtdb.firebaseio.com/skills.json"
+      "https://reemaportfolio-default-rtdb.asia-southeast1.firebasedatabase.app/skills.json"
     );
     const data = await response.json();
     skills = data.split(",");
@@ -71,17 +70,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      skills: [
-        "Python",
-        "Javascript",
-        "React",
-        "Next",
-        "HTML/CSS",
-        "Express",
-        "MongoDB",
-        "React Native",
-        "Redux",
-      ],
+      skills,
     },
     revalidate: 30,
   };
